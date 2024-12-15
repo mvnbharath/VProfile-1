@@ -8,6 +8,7 @@
     <version>v2</version>
     <name>Visualpathit VProfile Webapp</name>
     <url>http://maven.apache.org</url>
+
     <properties>
         <spring.version>4.2.0.RELEASE</spring.version>
         <spring-security.version>4.0.2.RELEASE</spring-security.version>
@@ -121,7 +122,7 @@
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.43.v20210629</version>  <!-- Updated to a more recent version -->
+                <version>9.4.43.v20210629</version> <!-- Updated to a stable version -->
                 <configuration>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <webApp>
@@ -134,7 +135,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version>  <!-- This is a good version -->
+                <version>0.8.7</version> <!-- Stable version -->
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -152,21 +153,21 @@
                 </executions>
             </plugin>
 
-            <!-- Update maven-war-plugin -->
+            <!-- Maven WAR Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>  <!-- Updated to a recent version -->
+                <version>3.3.1</version> <!-- Updated to latest version -->
             </plugin>
 
-            <!-- Updated Maven Compiler Plugin -->
+            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Latest stable version -->
+                <version>3.8.1</version> <!-- Updated to latest stable version -->
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
         </plugins>
